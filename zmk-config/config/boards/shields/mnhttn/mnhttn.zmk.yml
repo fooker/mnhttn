@@ -1,0 +1,11 @@
+file_format: "1"
+id: mnhttn
+name: MNHTTN
+type: shield
+url: https://github.com/fooker/mnhttn
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - mnhttn_left
+  - mnhttn_right
