@@ -1,3 +1,0 @@
-[submodule "zmk-config"]
-	path = zmk-config
-	url = git@github.com:fooker/mnhttn-zmk.git
