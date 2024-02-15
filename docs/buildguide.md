@@ -25,7 +25,7 @@ It is possible to solder all components and parts using a regular soldering iron
 The PCB comes in one peace with both halves connected with a break-off bridge.
 You need to separate both halves by breaking them apart.
 
-After breaking the appart, you're left with some spure marks.
+After breaking them appart, you're left with some spure marks.
 You can remove them with a file or a box cutter knife.
 
 ## Diodes
