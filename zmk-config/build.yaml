@@ -1,0 +1,8 @@
+include:
+  - board: seeeduino_xiao_ble
+    shield: mnhttn_left 
+  - board: seeeduino_xiao_ble
+    shield: mnhttn_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+

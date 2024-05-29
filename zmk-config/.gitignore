@@ -1,0 +1,11 @@
+/.west
+/bootloader
+/modules
+/tools
+/zephyr
+/zmk
+/build
+
+/mnhttn_left.uf2
+/mnhttn_right.uf2
+/settings_reset.uf2

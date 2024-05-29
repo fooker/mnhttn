@@ -1,0 +1,111 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#include "keys_de.h"
+
+#define BASE 0
+#define WMAN 1
+#define SYM  2
+#define NAV  3
+#define NUM  4
+#define ADJ  5
+
+/ {
+    chosen {
+      zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
+
+    behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+        mt: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <100>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+        };
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <100>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+        base_layer {
+            label= "BASE";
+            bindings = <
+                &ht ESC DE_Q    &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T              &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P
+                &mt LALT DE_A   &mt LCTRL DE_S  &mt LGUI DE_D   &mt LSHFT DE_F  &kp DE_G              &kp DE_H        &mt RSHFT DE_J  &mt RGUI DE_K   &mt RCTRL DE_L  &mt RALT DE_COLON
+                &kp DE_Y        &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B              &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS
+                                                &trans          &lt SYM SPACE   &lt NUM BSPC          &lt NAV TAB     &mt LSHFT RET   &trans
+            >;
+        };
+
+        workman_layer {
+            label= "WNAM";
+            bindings = <
+                &ht ESC DE_Q    &kp DE_D        &kp DE_R        &kp DE_W        &kp DE_B              &kp DE_J        &kp DE_F        &kp DE_U        &kp DE_P        &kp DE_COLON
+                &mt LALT DE_A   &mt LCTRL DE_S  &mt LGUI DE_H   &mt LSHFT DE_T  &kp DE_G              &kp DE_Y        &mt RSHFT DE_N  &mt RGUI DE_E   &mt RCTRL DE_O  &mt RALT DE_I
+                &kp DE_Z        &kp DE_X        &kp DE_M        &kp DE_C        &kp DE_V              &kp DE_K        &kp DE_L        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS
+                                                &trans          &lt SYM SPACE   &lt NUM BSPC          &lt NAV TAB     &mt LSHFT RET   &trans
+            >;
+        };
+
+        sim_layer {
+            label= "SYM";
+            bindings = <
+                &kp DE_EXCL     &kp DE_AT       &kp DE_LBRC     &kp DE_RBRC     &kp DE_GRAVE          &kp DE_SQT      &kp DE_U_UMLAUT &kp DE_CARET    &kp DE_O_UMLAUT &kp DE_STAR
+                &kp DE_A_UMLAUT &kp DE_SZ       &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS           &kp DE_DQT      &kp DE_EQUAL    &kp DE_DLLR     &kp DE_POUND    &kp DE_SEMI
+                &kp DE_PIPE     &kp DE_PRCNT    &kp DE_LBKT     &kp DE_RBKT     &kp DE_TILDE          &kp DE_AMPS     &kp DE_LT       &kp DE_GT       &kp DE_QMARK    &kp DE_UNDER
+                                                &trans          &trans          &trans                &kp DE_SLASH    &kp RSHFT       &trans
+            >;
+        };
+
+        nav_layer {
+            label= "NAV";
+	          bindings = <
+                &kp ESC         &trans          &trans          &trans          &trans                &kp DEL         &kp PG_UP       &kp UP          &kp PG_DN       &kp INS
+                &kp LALT        &kp LCTRL       &kp LGUI        &kp LSHFT       &trans                &kp HOME        &kp LEFT        &kp DOWN        &kp RIGHT       &kp END
+                &trans          &trans          &trans          &trans          &trans                &trans          &trans          &trans          &trans          &trans
+                                                &trans          &kp BSPC        &kp DEL               &trans          &trans          &sl ADJ
+            >;
+        };
+
+        num_layer {
+            label= "NUM";
+	          bindings = <
+                &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                &kp F6          &kp F7          &kp F8          &kp F9          &kp F10
+                &mt LALT N1     &mt LCTRL N2    &mt LGUI N3     &mt LSHFT N4    &kp N5                &kp N6          &mt RSHFT N7    &mt RGUI N8     &mt RCTRL N9    &mt RALT N0
+                &trans          &trans          &trans          &kp DE_COLON    &kp DE_DOT            &trans          &trans          &trans          &trans          &trans
+                                                &sl ADJ         &trans          &trans                &kp DE_BSLH     &trans          &trans
+            >;
+        };
+
+        adjust_layer {
+            label= "ADJ";
+	          bindings = <
+                &sys_reset      &bt BT_CLR_ALL  &out OUT_TOG    &trans          &tog WMAN             &tog WMAN       &trans          &out OUT_TOG    &bt BT_CLR_ALL  &sys_reset
+                &bootloader     &bt BT_NXT      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_NXT      &bootloader
+                &trans          &bt BT_PRV      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_PRV      &trans
+                                                &trans          &trans          &trans                &trans          &trans          &trans
+            >;
+        };
+    };
+};
