@@ -34,6 +34,12 @@ My [ZMK config](https://github.com/fooker/mnhttn-zmk) for the mnhTTn.
 ![mnhTTn](/docs/images/mnhTTn_black_profile.jpg)\
 ![mnhTTn](/docs/images/mnhTTn_black_top.jpg)
 
+## Other Versions
+There are other versions, derivats and spin-offs of this keyboard:
+- **[mnhTTn48](https://github.com/venc0r/mnhttn)**: A 5*4+3+1 Keys versions with an additional top row and and extra key right above the diode array
+
+If you have build or want to build something based on the mnhTTn keyboard or know about somebody that has created something with it, feel free to reach out and I will happly extend this list and provide support.
+
 ## Credits and inspirationt
 The idea to creat such a keyboard emerged from the wonderfull [Click! Clack! Hack!](https://www.clickclackhack.de/) community.
 
