@@ -71,8 +71,8 @@
         sim_layer {
             label= "SYM";
             bindings = <
-                &kp DE_EXCL     &kp DE_AT       &kp DE_LBRC     &kp DE_RBRC     &kp DE_GRAVE          &kp DE_SQT      &kp DE_U_UMLAUT &kp DE_CARET    &kp DE_O_UMLAUT &kp DE_STAR
-                &kp DE_A_UMLAUT &kp DE_SZ       &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS           &kp DE_DQT      &kp DE_EQUAL    &kp DE_DLLR     &kp DE_POUND    &kp DE_SEMI
+                &kp DE_EXCL     &kp DE_AT       &kp DE_LBRC     &kp DE_RBRC     &kp DE_GRAVE          &kp DE_SQT      &kp DE_CARET    &kp DE_U_UMLAUT &kp DE_POUND    &kp DE_STAR
+                &kp DE_A_UMLAUT &kp DE_SZ       &kp DE_LPAR     &kp DE_RPAR     &kp DE_PLUS           &kp DE_DQT      &kp DE_EQUAL    &kp DE_DLLR     &kp DE_O_UMLAUT &kp DE_SEMI
                 &kp DE_PIPE     &kp DE_AMPS     &kp DE_LBKT     &kp DE_RBKT     &kp DE_TILDE          &kp DE_PRCNT    &kp DE_LT       &kp DE_GT       &kp DE_QMARK    &kp DE_UNDER
                                                 &trans          &trans          &trans                &kp DE_SLASH    &kp RSHFT       &trans
             >;
