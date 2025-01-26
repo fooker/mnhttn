@@ -6,18 +6,16 @@ LAYERS := F.Cu B.Cu F.Paste B.Paste F.Silkscreen B.Silkscreen F.Mask B.Mask Edge
 
 DRLS := $(addprefix out/$(NAME)-, $(addsuffix .drl, PTH NPTH))
 
-GBRS := $(addprefix out/$(NAME)-, $(addsuffix .gbr, $(LAYERS:.=_)))
+GBRS := $(addprefix out/$(NAME)-, $(addsuffix .gbr, $(subst .,_,$(LAYERS))))
 
 SPACE := $(subst ,, )
 COMMA := ,
 
-out.zip: $(DRLS) $(GBRS) | out
-	zip -rv out.zip out
+out.zip &: $(DRLS) $(GBRS)
+	zip -j -v out.zip $^
 
-out:
+$(DRLS) &: $(NAME).kicad_pcb
 	mkdir -p out
-
-$(DRLS) &: $(NAME).kicad_pcb | out
 	kicad-cli pcb export drill \
 		--format gerber \
 		--drill-origin absolute \
@@ -27,7 +25,8 @@ $(DRLS) &: $(NAME).kicad_pcb | out
 		--output out/ \
 		$<
 
-$(GBRS) &: $(NAME).kicad_pcb | out
+$(GBRS) &: $(NAME).kicad_pcb
+	mkdir -p out
 	kicad-cli pcb export gerbers \
 		--layers $(subst $(SPACE),$(COMMA),$(strip $(LAYERS))) \
 		--output out/ \
