@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet","Digikey"
+"U1,U2","2","xiao-ble","","","","mnhttn:xiao-ble-smd-cutout","~","1597-102010448-ND"
+"D_L_0_0,D_L_0_1,D_L_0_2,D_L_0_3,D_L_1_0,D_L_1_1,D_L_1_2,D_L_1_3,D_L_2_0,D_L_2_1,D_L_2_2,D_L_2_3,D_L_3_0,D_L_3_1,D_L_3_2,D_L_4_0,D_L_4_1,D_L_4_2,D_R_0_0,D_R_0_1,D_R_0_2,D_R_0_3,D_R_1_0,D_R_1_1,D_R_1_2,D_R_1_3,D_R_2_0,D_R_2_1,D_R_2_2,D_R_2_3,D_R_3_0,D_R_3_1,D_R_3_2,D_R_4_0,D_R_4_1,D_R_4_2","36","D_Small","","","","mnhttn:Diode_SOD123","~","1655-1N4148WTR-ND"
+"BT1,BT2","2","Battery_Cell","","","","mnhttn:WAGO_2060-452_998-404","~","2946-2060-472/998-404TR-ND"
+"SW2,SW4","2","SW_SPDT","","","","mnhttn:MSK12C02","~","732-13665-2-ND"
+"SW1,SW3","2","SW_Push","","","","mnhttn:PushSwitch","~","EG5470TR-ND"
+"SW_L_0_0,SW_L_0_1,SW_L_0_2,SW_L_0_3,SW_L_1_0,SW_L_1_1,SW_L_1_2,SW_L_1_3,SW_L_2_0,SW_L_2_1,SW_L_2_2,SW_L_2_3,SW_L_3_0,SW_L_3_1,SW_L_3_2,SW_L_4_0,SW_L_4_1,SW_L_4_2,SW_R_0_0,SW_R_0_1,SW_R_0_2,SW_R_0_3,SW_R_1_0,SW_R_1_1,SW_R_1_2,SW_R_1_3,SW_R_2_0,SW_R_2_1,SW_R_2_2,SW_R_2_3,SW_R_3_0,SW_R_3_1,SW_R_3_2,SW_R_4_0,SW_R_4_1,SW_R_4_2","36","Cherry_MX_ULP_SK6812_151","","","","mnhttn:Cherry_MX_ULP","~","MX6C-K3NB"
