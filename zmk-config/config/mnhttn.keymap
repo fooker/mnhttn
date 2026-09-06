@@ -103,7 +103,7 @@
 	          bindings = <
                 &sys_reset      &bt BT_CLR_ALL  &out OUT_TOG    &trans          &tog WMAN             &tog WMAN       &trans          &out OUT_TOG    &bt BT_CLR_ALL  &sys_reset
                 &bootloader     &bt BT_NXT      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_NXT      &bootloader
-                &trans          &bt BT_PRV      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_PRV      &trans
+                &studio_unlock  &bt BT_PRV      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_PRV      &trans
                                                 &trans          &trans          &trans                &trans          &trans          &trans
             >;
         };

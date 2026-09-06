@@ -3,9 +3,10 @@ id: mnhttn
 name: MNHTTN
 type: shield
 url: https://github.com/fooker/mnhttn
-requires: [seeeduino_xiao_ble]
+requires: [seeed_xiao]
 features:
   - keys
+  - studio
 siblings:
   - mnhttn_left
   - mnhttn_right

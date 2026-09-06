@@ -2,7 +2,6 @@
 /bootloader
 /modules
 /tools
-/zephyr
 /zmk
 /build
 

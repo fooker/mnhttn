@@ -1,0 +1,58 @@
+/*
+ * Copyright (c) 2026 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <physical_layouts.dtsi>
+
+/ {
+    // Approximate column-stagger positions (not measured from the physical
+    // board); adjust rx/ry/x/y below if these don't match your build.
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0  100       0     0     0>  // RC(0,0)
+            , <&key_physical_attrs 100 100  100   50       0     0     0>  // RC(0,1)
+            , <&key_physical_attrs 100 100  200    0       0     0     0>  // RC(0,2)
+            , <&key_physical_attrs 100 100  300   50       0     0     0>  // RC(0,3)
+            , <&key_physical_attrs 100 100  400   60       0     0     0>  // RC(0,4)
+            , <&key_physical_attrs 100 100 1000   60       0     0     0>  // RC(0,5)
+            , <&key_physical_attrs 100 100 1100   50       0     0     0>  // RC(0,6)
+            , <&key_physical_attrs 100 100 1200    0       0     0     0>  // RC(0,7)
+            , <&key_physical_attrs 100 100 1300   50       0     0     0>  // RC(0,8)
+            , <&key_physical_attrs 100 100 1400  100       0     0     0>  // RC(0,9)
+
+            , <&key_physical_attrs 100 100    0  200       0     0     0>  // RC(1,0)
+            , <&key_physical_attrs 100 100  100  150       0     0     0>  // RC(1,1)
+            , <&key_physical_attrs 100 100  200  100       0     0     0>  // RC(1,2)
+            , <&key_physical_attrs 100 100  300  150       0     0     0>  // RC(1,3)
+            , <&key_physical_attrs 100 100  400  160       0     0     0>  // RC(1,4)
+            , <&key_physical_attrs 100 100 1000  160       0     0     0>  // RC(1,5)
+            , <&key_physical_attrs 100 100 1100  150       0     0     0>  // RC(1,6)
+            , <&key_physical_attrs 100 100 1200  100       0     0     0>  // RC(1,7)
+            , <&key_physical_attrs 100 100 1300  150       0     0     0>  // RC(1,8)
+            , <&key_physical_attrs 100 100 1400  200       0     0     0>  // RC(1,9)
+
+            , <&key_physical_attrs 100 100    0  300       0     0     0>  // RC(2,0)
+            , <&key_physical_attrs 100 100  100  250       0     0     0>  // RC(2,1)
+            , <&key_physical_attrs 100 100  200  200       0     0     0>  // RC(2,2)
+            , <&key_physical_attrs 100 100  300  250       0     0     0>  // RC(2,3)
+            , <&key_physical_attrs 100 100  400  260       0     0     0>  // RC(2,4)
+            , <&key_physical_attrs 100 100 1000  260       0     0     0>  // RC(2,5)
+            , <&key_physical_attrs 100 100 1100  250       0     0     0>  // RC(2,6)
+            , <&key_physical_attrs 100 100 1200  200       0     0     0>  // RC(2,7)
+            , <&key_physical_attrs 100 100 1300  250       0     0     0>  // RC(2,8)
+            , <&key_physical_attrs 100 100 1400  300       0     0     0>  // RC(2,9)
+
+            , <&key_physical_attrs 100 100  350  375  (-700)   475   375>  // RC(3,2)
+            , <&key_physical_attrs 100 100  475  375     500   425   325>  // RC(3,3)
+            , <&key_physical_attrs 100 100  610  375    1600   530   300>  // RC(3,4)
+            , <&key_physical_attrs 100 100  790  375 (-1600)   970   300>  // RC(3,5)
+            , <&key_physical_attrs 100 100  925  375  (-500)  1075   325>  // RC(3,6)
+            , <&key_physical_attrs 100 100 1050  375     700  1025   375>  // RC(3,7)
+            ;
+    };
+};
