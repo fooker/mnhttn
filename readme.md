@@ -21,6 +21,14 @@ But this requires additional attention while soldering on the swithches to preve
 There are no keycaps available off the shelve but have been manifactured using MJF in nylon.
 The models are availabe [here](/keycaps/).
 
+## Case
+The (slightly overengineered) 3d printed case is available [here](/case/).
+The case is best printed in PETG and you need the following material to build it:
+- 2 round magnets with a diameter of 5mm and a height of 3mm
+- 7 machines screws with a flat and countersunk head of size 2x10mm
+- A festival/concert/entrance wristband of you'r favorite band or message
+- A few drops of superglue
+
 ## Build Guide
 The build guide can be found [here](/docs/buildguide.md).
 
